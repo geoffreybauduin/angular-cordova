@@ -1,0 +1,27 @@
+{
+  "name": "angular-cordova",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lght/angular-cordova",
+  "authors": [
+    "Geoffrey Bauduin <bauduin.geo@gmail.com>"
+  ],
+  "description": "Cordova bindings for AngularJS",
+  "main": "dist/angular-cordova.min.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angularjs",
+    "cordova",
+    "angular",
+    "phonegap"
+  ],
+  "license": "Apache",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

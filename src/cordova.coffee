@@ -1,13 +1,15 @@
 angular.module "Cordova", []
 
-angular.module("Cordova").factory "Cordova", ['$q', '$rootScope', '$document',
+angular.module("Cordova").factory "$cordova", ['$q', '$rootScope', '$document',
 	($q, $rootScope, $document) ->
 		deferred = do $q.defer
 		$document.bind "deviceready", () ->
 			$rootScope.$apply () ->
 				do deferred.resolve
 
-		this.ready = () ->
+		@ready = () ->
 			return deferred.promise
 
-		return this
+		return @
+
+]
