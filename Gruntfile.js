@@ -7,8 +7,11 @@ module.exports = function(grunt) {
         },
         coffee: {
             compile: {
+                options: {
+                    bare: true
+                },
                 files: {
-                    'dist/angular-cordova.js' : ["src/*.coffee"]
+                    'dist/angular-cordova.js' : ["src/cordova.coffee", "src/modules/*.coffee"]
                 }
             }
         },
