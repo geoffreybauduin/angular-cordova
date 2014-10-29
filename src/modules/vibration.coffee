@@ -3,4 +3,6 @@ angular.module("Cordova").service "$cordovaVibration", ['$cordova', '$window',
 		@vibrate = (duration) ->
 			$cordova.ready().then () ->
 				$window.navigator.vibrate duration
+
+		return
 ]
