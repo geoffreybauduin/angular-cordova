@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         vars: {
-            timestamp: new Date().getTime()
+            timestamp: new Date().getTime(),
+            utcDate: new Date().toUTCString()
         },
         coffee: {
             compile: {
@@ -17,7 +18,7 @@ module.exports = function(grunt) {
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= vars.timestamp %> */\n',
+                banner: '/*! <%= pkg.name %> version <%= pkg.version %> <%= vars.utcDate %> */\n',
                 mangle: true
             },
             app: {
