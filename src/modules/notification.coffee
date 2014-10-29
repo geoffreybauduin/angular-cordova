@@ -9,10 +9,6 @@ angular.module("Cordova").service "$cordovaNotification", ['$cordova', '$window'
 			$cordova.ready().then () ->
 				$window.navigator.notification.confirm message, callback, alert, button
 
-		@vibrate = (duration) ->
-			$cordova.ready().then () ->
-				$window.navigator.notification.vibrate duration
-
 		return
 
 ]
