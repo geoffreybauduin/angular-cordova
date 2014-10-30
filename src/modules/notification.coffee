@@ -7,7 +7,7 @@ angular.module("Cordova").service "$cordovaNotification", ['$cordova', '$window'
 
 		@confirm = (message, callback, alert, buttons) ->
 			$cordova.ready().then () ->
-				$window.navigator.notification.confirm message, callback, alert, button
+				$window.navigator.notification.confirm message, callback, alert, buttons
 
 		return
 
