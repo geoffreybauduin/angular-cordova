@@ -78,7 +78,7 @@ angular.module("Cordova").service("$cordovaNotification", [
     };
     this.confirm = function(message, callback, alert, buttons) {
       return $cordova.ready().then(function() {
-        return $window.navigator.notification.confirm(message, callback, alert, button);
+        return $window.navigator.notification.confirm(message, callback, alert, buttons);
       });
     };
   }

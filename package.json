@@ -1,6 +1,6 @@
 {
   "name": "angular-cordova",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cordova bindings for AngularJS",
   "main": "dist/angular-cordova.js",
   "scripts": {
