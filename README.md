@@ -1,5 +1,7 @@
 # angular-cordova
 
+[ ![Codeship Status for lght/angular-cordova](https://www.codeship.io/projects/44b032c0-4582-0132-32ae-16f5753a0fc7/status)](https://www.codeship.io/projects/45025)
+
 **Cordova bindings for AngularJS**
 
 ## How to install this plugin ?
