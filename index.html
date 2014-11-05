@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Angular-cordova by lght</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Angular-cordova</h1>
+          <h2>Cordova bindings for AngularJS</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/lght/angular-cordova/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/lght/angular-cordova/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/lght/angular-cordova" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="angular-cordova" class="anchor" href="#angular-cordova" aria-hidden="true"><span class="octicon octicon-link"></span></a>angular-cordova</h1>
+
+<p><a href="https://www.codeship.io/projects/45025"> <img src="https://www.codeship.io/projects/44b032c0-4582-0132-32ae-16f5753a0fc7/status" alt="Codeship Status for lght/angular-cordova"></a></p>
+
+<p><strong>Cordova bindings for AngularJS</strong></p>
+
+<h2>
+<a id="how-to-install-this-plugin-" class="anchor" href="#how-to-install-this-plugin-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install this plugin ?</h2>
+
+<pre><code>bower install angularjs-cordova
+</code></pre>
+
+<h3>
+<a id="how-to-use-" class="anchor" href="#how-to-use-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use ?</h3>
+
+<p>Add the module to your dependencies</p>
+
+<pre><code>angular.module("app", ['Cordova']);
+</code></pre>
+
+<p>You can use <code>$cordova</code> factory to know when cordova has fired <code>deviceready</code>:</p>
+
+<pre><code>angular.module("app").run(function ($cordova) {
+  $cordova.ready().then(function () {
+    alert("Device is ready");
+  });
+});
+</code></pre>
+
+<h3>
+<a id="modules" class="anchor" href="#modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h3>
+
+<h4>
+<a id="orgapachecordovacamera" class="anchor" href="#orgapachecordovacamera" aria-hidden="true"><span class="octicon octicon-link"></span></a>org.apache.cordova.camera</h4>
+
+<p><a href="https://github.com/apache/cordova-plugin-camera">https://github.com/apache/cordova-plugin-camera</a></p>
+
+<p><strong>$cordovaCamera.getPicture</strong></p>
+
+<p>This function takes a picture using the camera. It wraps the call to <code>navigator.camera.getPicture</code></p>
+
+<pre><code>$cordovaCamera.getPicture( cameraSuccess, cameraError, cameraOptions );
+</code></pre>
+
+<h4>
+<a id="orgapachecordovadialogs" class="anchor" href="#orgapachecordovadialogs" aria-hidden="true"><span class="octicon octicon-link"></span></a>org.apache.cordova.dialogs</h4>
+
+<p><a href="https://github.com/apache/cordova-plugin-dialogs">https://github.com/apache/cordova-plugin-dialogs</a></p>
+
+<p><strong>$cordovaNotification.confirm</strong></p>
+
+<p>This function provides a notification box with 2 buttons. It wraps the call to <code>navigator.notification.confirm</code></p>
+
+<pre><code>$cordovaNotification.confirm( message, confirmCallback, [title], [buttonLabels] );
+</code></pre>
+
+<p><strong>$cordovaNotification.alert</strong></p>
+
+<p>This function provides a notification box with 1 button. It wraps the call to <code>navigator.notification.alert</code></p>
+
+<pre><code>$cordovaNotification.alert(message, alertCallback, [title], [buttonName]);
+</code></pre>
+
+<h4>
+<a id="orgapachecordovavibration" class="anchor" href="#orgapachecordovavibration" aria-hidden="true"><span class="octicon octicon-link"></span></a>org.apache.cordova.vibration</h4>
+
+<p><a href="https://github.com/apache/cordova-plugin-vibration">https://github.com/apache/cordova-plugin-vibration</a></p>
+
+<p><strong>$cordovaVibration.vibrate</strong></p>
+
+<p>This function triggers the phone vibration. It wraps the call to <code>navigator.vibrate</code></p>
+
+<pre><code>$cordovaVibration.vibrate( duration );
+</code></pre>
+
+<h4>
+<a id="orgapachecordovasplashscreen" class="anchor" href="#orgapachecordovasplashscreen" aria-hidden="true"><span class="octicon octicon-link"></span></a>org.apache.cordova.splashscreen</h4>
+
+<p><a href="https://github.com/apache/cordova-plugin-splashscreen">https://github.com/apache/cordova-plugin-splashscreen</a></p>
+
+<p><strong>$cordovaSplashscreen.show</strong>
+This function shows the Splashscreen. It wraps the call to <code>navigator.splashscreen.show</code></p>
+
+<pre><code>$cordovaSplashscreen.show();
+</code></pre>
+
+<p><strong>$cordovaSplashscreen.hide</strong>
+This function hides the Splashscreen. It wraps the call to <code>navigator.splashscreen.hide</code></p>
+
+<pre><code>$cordovaSplashscreen.hide();
+</code></pre>
+
+<h4>
+<a id="orgapachecordovageolocation" class="anchor" href="#orgapachecordovageolocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>org.apache.cordova.geolocation</h4>
+
+<p><a href="https://github.com/apache/cordova-plugin-geolocation">https://github.com/apache/cordova-plugin-geolocation</a></p>
+
+<p><strong>$cordovaGeolocation.getCurrentPosition</strong>
+This function retrieves the current position of the device. It wraps the call to <code>navigator.geolocation.getCurrentPosition</code>.</p>
+
+<pre><code>$cordovaGeolocation.getCurrentPosition(onSuccess, onError);
+</code></pre>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>To contribute, fork this repository. Create a pull request to request a merge (obvious right ?).</p>
+
+<h4>
+<a id="how-to-clone-and-prepare-the-dependencies-" class="anchor" href="#how-to-clone-and-prepare-the-dependencies-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to clone and prepare the dependencies ?</h4>
+
+<pre><code>git clone git@github.com:xx/angular-cordova
+cd angular-cordova
+npm install
+</code></pre>
+
+<h4>
+<a id="how-to-build-" class="anchor" href="#how-to-build-" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to build ?</h4>
+
+<pre><code>grunt build
+</code></pre>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE</h1>
+
+<p>This project is under Apache License (since AngularJS is under this one).</p>
+        </section>
+
+        <footer>
+          Angular-cordova is maintained by <a href="https://github.com/lght">lght</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-47269624-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
+</html>
